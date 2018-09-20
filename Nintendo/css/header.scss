@@ -1,0 +1,695 @@
+$bg:#e60012;
+$h-top:42px;
+#header{
+    width:1440px;
+}
+#main{
+    width:100%;
+    position: relative;
+    div.top-nav{
+        width:1270px;
+        height:42px;
+        margin:0 auto;
+        a.logo{
+            position: absolute;
+            top:-10px;
+            width:180px;
+            height:100px;
+            padding-top: 43px;
+            box-sizing: border-box;
+            background:$bg;
+            text-align: center;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            transition: all 0.25s linear;
+            z-index:200;
+            box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
+            &:hover{
+                top:0;
+            }
+            img{
+                width:120px;
+                height:30px;
+            }
+        }
+    }
+    div.bottom-nav{
+        height:30px;
+        padding-left: 265px;
+        background: linear-gradient(to bottom,#f5f5f5 0%,#dadada 100%);
+        display:flex;
+        a{
+            height:30px;
+            line-height: 30px;
+            padding: 0 40px;
+        }
+        .ns{
+            background: #fff;
+            color: #8c8c8c;
+        }
+        .threeds{
+            background: #ce181e;
+            color:#fff;
+        }
+        .game{
+            background: #ff7d00;
+            color:#fff;
+        }
+        .amiibo{
+            background: #fff;
+            color:#8c8c8c;
+        }
+        .play{
+            background: #FF3F3F;
+            color:#fff;
+        }
+        .support{
+            background: #00BFF3;
+            color:#fff;
+        }
+        .mynintendo{
+            background: #fff;
+            color:#8c8c8c;
+        }
+    }
+}
+#search{
+    height:$h-top;
+    padding-left:180px; 
+    display: flex;
+    position: absolute;
+    z-index: 50;
+    div.search-container{
+        width:447px;
+        height:$h-top;
+        perspective: 200px;
+        input.search{
+            width:685px;
+            height:$h-top;
+            border:0;
+            outline: 0;
+            padding:0 1px 0 10px;
+            font-size: 20px;
+            color:#888;
+        }
+        ul{
+            transform-style:preserve-3d;
+            width:822px;
+            height:291px;
+            box-sizing: border-box;
+            padding: 16px 16px 24px;
+            border-radius: 0 0 20px 20px;
+            position: absolute;
+            background: #fff;
+            z-index:2;
+            transform-origin: center top;
+            visibility: hidden;
+            transform: rotateX(-90deg);
+            li:first-child>a{
+                color:#888;
+                &:hover{
+                    color:#888;
+                }
+            }
+            li{
+                height:25px;
+                a{
+                    color:#2576bc;
+                    cursor: pointer;
+                    &:hover{
+                        color:#00d2be;
+                    }
+                }
+            }
+        }
+        ul.hide{
+            visibility: hidden;
+            transform: rotateX(-90deg);
+            transition: all .5s linear;
+        }
+        ul.show{
+            visibility: visible;
+            transform: rotateX(0);
+            transition: all .5s linear;
+        }
+    }
+    div.search-input{
+        width:360px;
+        height:$h-top;
+        line-height: $h-top;
+        padding: 0 14px;
+        position: relative;
+        margin-right: 15px;
+        &:hover{
+            color:#00d2be;
+            cursor:pointer;
+        }
+        div.frame{
+            width:360px;
+            height:34px;
+            border:1px solid #ccc;
+            border-radius: 20px;
+            position: absolute;
+            top:4px;
+            left: 0;
+        }
+        img{
+            width:25px;
+            position: absolute;
+            top:9px;
+            right:18px;
+        }
+    }
+    a.country{
+        width:133px;
+        height:$h-top;
+        line-height: $h-top;
+        background: url(../img/index/thumb_kinopio.jpg) no-repeat right center;
+        background-size: 32px 21px;
+        margin-right: 15px;
+    }
+    a.user{
+        height:$h-top;
+        line-height: $h-top;
+        img{
+            width:16px;
+
+        }
+    }
+}
+#mask{
+    width:1440px;
+    height:693px;
+    position: absolute;
+    left:-265px;
+    z-index: 1;
+    background: rgba(0,0,0,0.5);
+    &.hide{
+        height:0;
+    }
+}
+.hide{
+    visibility: hidden;
+}
+.show{
+    visibility: visible;
+}
+.wrapper{
+    width:980px;
+    height:447px;
+    margin:0 214px;
+    display: flex;
+    flex-wrap: wrap;
+    &>img{
+        position: absolute;
+    }
+    .mario-jump{
+        left:-1px;
+        top:30px;
+        animation: jump 5s linear infinite;
+    }
+    .pipe{
+        left:35px;
+        top:400px;
+    }
+    .paratroopa{
+        right:1px;
+        top:40px;
+        animation: jump 5s linear infinite;
+    }
+    .qes-block{
+        right:20px;
+        top:370px;
+    }
+    .brick{
+        right:135px;
+        top:370px
+    }
+    .peach{
+        left:-80px;
+        top:40px;
+        animation: sway 5s linear infinite;
+    }
+    .luigi{
+        right:1px;
+        top:30px;
+        animation: jump 5s linear infinite;
+    }
+    .threepipe{
+        right:35px;
+        top:400px;
+    }
+    .game-brick{
+        top:140px;
+        left:70px;
+    }
+    .bobomb{
+        top:300px;
+        left:20px;
+        animation: sway 5s linear infinite;
+    }
+    .bowser{
+        right:-220px;
+        top:50px;
+        animation: grow 5s linear infinite;
+    }
+    .lakitu{
+        top:50px;
+        left:60px;
+        animation: jump 5s linear infinite;
+    }
+    .spiny{
+        top:350px;
+        left:30px;
+        animation: sway 5s linear infinite;
+    }
+    .pl-bobomb{
+        bottom:20px;
+        left:760px;
+        animation: sway 5s linear infinite 3s;
+    }
+    .goomba{
+        bottom:20px;
+        left:1010px;
+        animation: sway 5s linear infinite;        
+    }
+    .yoshi{
+        bottom:20px;
+        right:-130px;
+        animation: sway 5s linear infinite 1s;
+    }
+    .sup-block{
+        top:150px;
+        left:70px;
+    }
+    .goomba-open{
+        bottom:10px;
+        left:10px;
+        animation:rock 5s linear infinite;
+    }
+    .goomba-close{
+        bottom:80px;
+        left:110px;
+        animation:rock 5s linear infinite 2s;
+    }
+    .toad-left{
+        top:230px;
+        right:80px;
+        animation: sway 5s linear infinite;
+    }
+    .toad-mid{
+        top: 100px;
+        right:-50px;
+        animation: rock 5s linear infinite;
+    }
+}
+.wrapper a{
+    border-radius: 20px;
+}
+.main-titles{
+    width:225px;
+    height:447px;
+    margin:0 10px;
+    position: relative;
+}
+.main-titles>a.main{
+    display: block;
+    width:225px;
+    height:352px;
+    box-sizing: border-box;
+    position: absolute;
+    margin-bottom:17px;
+    background: #e60012;
+    background-image: url(../img/index/ns/home.jpg);
+    background-position: 50% 120%;
+    background-size: 225px;
+    background-repeat: no-repeat;
+    transition: all .2s linear;
+    div{
+        transition: all .2s linear;
+    }
+    &:hover{
+        background-size: 250px;
+        &::before{
+            content: "";
+            display: "block";
+            width: 100%;
+            height:100%;
+            position: absolute;
+            top:0;
+            left:0;
+            border-radius: 20px;  
+            background:inherit;
+            filter: blur(5px);        
+        }
+        div.link-title{
+            top:120px;
+        }
+        div.link-copy{
+            top:250px;
+        }
+    }
+}
+.link-title{
+    font-size: 27px;
+    color:#fff;
+    width:225px;
+    text-align: center;
+    position: absolute;
+    top:20px;
+}
+.link-copy{
+    font-size: 16px;
+    color:#fff;
+    width:225px;
+    height:38px;
+    text-align: center;
+    position: absolute;
+    top:300px;
+}
+.buy{
+    display: block;
+    height: 77px;
+    line-height: 77px;
+    text-align: center;
+    font-size: 30px;
+    color:#fff;
+    background:#f7a324;
+    margin-top:369px;
+    &:hover{
+        color:#fff;
+    }
+}
+.small-titles{
+    width:735px;
+    height:447px;
+}
+.small-titles>a{
+    float: left;
+    position: relative;
+    width:225px;
+    height:214px;
+    box-sizing: border-box;
+    margin:0 10px 20px;
+    background: #e60012;
+    font-size:20px;
+    color:#fff;
+    text-align: center;
+    line-height:50px;
+    background-image: url(../img/index/ns/features.jpg);
+    background-repeat: no-repeat;
+    background-size: 225px;
+    background-position: 0 100%;
+    transition: all .2s linear;
+    &:hover{
+        padding-top:80px;
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            top:0px;
+            left:0px;
+            border-radius: 20px;
+            width:225px;
+            height:214px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+.small-titles>a:nth-child(2){
+    background-image: url(../img/index/ns/onlineservice.jpg);
+}
+.small-titles>a:nth-child(3){
+    background-image: url(../img/index/ns/games.jpg);
+}
+.small-titles>a:nth-child(4){
+    background-image: url(../img/index/ns/familyfun.jpg);
+}
+.small-titles>a:nth-child(5){
+    background-image: url(../img/index/ns/accessories.jpg);
+}
+.small-titles>a:last-child{
+    background-image: url(../img/index/ns/labo.jpg);
+}
+#expended{
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+}
+#expended>div{
+    width:100%;
+    height:527px;
+    padding:40px 16px;
+    position: absolute;
+}
+.navHide{
+    height:0;
+    overflow: hidden;
+}
+.navShow{
+    height:527px;
+}
+.gameHide{
+    display: none;
+}
+.gameShow{
+    display: block;
+}
+/*3ds*/
+.main-titles>a.threeds{
+    background-color: #FF0008; 
+    background-image: url(../img/index/threeds/3ds.jpg);
+    background-position: 50% 100%;
+}
+div.threeds>a{
+    background-color: #FF0008;
+}
+div.threeds>a:first-child{
+    background-image: url(../img/index/threeds/what-is-nintendo-3ds.jpg);
+}
+div.threeds>a:nth-child(2){
+    background-image: url(../img/index/threeds/what-is-nintendo-2ds.jpg);
+}
+div.threeds>a:nth-child(3){
+    background-image: url(../img/index/threeds/games.jpg);
+}
+div.threeds>a:nth-child(4){
+    background-image: url(../img/index/threeds/features.jpg);
+}
+div.threeds>a:nth-child(5){
+    background-image: url(../img/index/threeds/built-in-software.jpg);
+}
+div.threeds>a:last-child{
+    background-image: url(../img/index/threeds/faq.png);
+}
+/*game store*/
+.main-titles>a.game{
+    background-color: #f7a324;
+    background-image: url(../img/index/gamestore/game-store.jpg);
+    background-position: 50% 100%;
+}
+div.game>a{
+    background-color: #f7a324;
+}
+div.game>a:first-child{
+    background-image: url(../img/index/gamestore/switch-games.jpg);
+}
+div.game>a:nth-child(2){
+    background-image: url(../img/index/gamestore/nintendo-3ds-games.jpg);
+}
+div.game>a:nth-child(3){
+    background-image: url(../img/index/gamestore/wiiu-games.jpg);
+}
+div.game>a:nth-child(4){
+    background-image: url(../img/index/gamestore/mobile-games.jpg);
+}
+div.game>a:nth-child(5){
+    background-image: url(../img/index/gamestore/sales-and-offers.jpg);
+}
+div.game>a:last-child{
+    background-image: url(../img/index/gamestore/star.jpg);
+}
+/*amiibo*/
+.main-titles>a.amiibo{
+    background-color: #25adf3;
+    background-image: url(../img/index/amiibo/mario-amiibo.jpg);
+    background-position: 50% 100%;
+}
+div.amiibo>a:first-child{
+    background-color:#e6001e; 
+    background-image: url(../img/index/amiibo/what-is-amiibo.jpg);
+}
+div.amiibo>a:nth-child(2){
+    background-color: #25adf3;
+    background-image: url(../img/index/amiibo/lineup.jpg);
+}
+div.amiibo>a:nth-child(3){
+    background-color: #a5c80f;
+    background-image: url(../img/index/amiibo/games.jpg);
+}
+div.amiibo>a:nth-child(4){
+    background-color: #009682;
+    background-image: url(../img/index/amiibo/compatibility.jpg);
+}
+div.amiibo>a:last-child{
+    background-color: #e62d8c;
+    background-image: url(../img/index/amiibo/faq.png);
+}
+/*play nintendo*/
+.main-titles>a.play{
+    height:447px;
+    background-color: #fa6a6a;
+    background-image: url(../img/index/play/play-nintendo.jpg);
+    background-position: 50% 100%;
+}
+.main-titles>a.play>div.link-copy{
+    top:380px;
+}
+div.play>a{
+    background-color: #fa6a6a;
+}
+div.play>a:first-child{
+    background-image: url(../img/index/play/donkey-kong-diddy-kong.jpg);
+}
+div.play>a:nth-child(2){
+    background-image: url(../img/index/play/lakitu.jpg);
+}
+div.play>a:nth-child(3){
+    background-image: url(../img/index/play/peach.jpg);
+}
+div.play>a:last-child{
+    background-image: url(../img/index/play/baby-mario-and-yoshi.jpg);
+}
+/*support*/
+.main-titles>a.support{
+    height:447px;
+    background-color:#55d4f7;
+    background-image: url(../img/index/support/mario.jpg);
+    background-position: 50% 100%;
+}
+.main-titles>a.support>div.link-copy{
+    top:350px;
+}
+div.support>a{
+    background-color: #55d4f7;
+    background-position: 50% 55%;
+}
+div.support>a:first-child{
+    background-size: 90px 111px;
+    background-image: url(../img/index/support/icon-joy-con.svg);
+}
+div.support>a:nth-child(2){
+    background-size: 174px 111px;
+    background-image: url(../img/index/support/threeds-support.svg);
+}
+div.support>a:nth-child(3){
+    background-size: 95px 111px;
+    background-image: url(../img/index/support/support-forums.svg);
+}
+div.support>a:nth-child(4){
+    background-size: 113px 111px;
+    background-image: url(../img/index/support/digital-purchases.svg);
+}
+div.support>a:nth-child(5){
+    background-size: 95px 111px;
+    background-image: url(../img/index/support/internet-connections.svg);
+}
+div.support>a:last-child{
+    background-size: 92px 111px;
+    background-image: url(../img/index/support/set-up-repair.svg);
+}
+/*my nintendo*/
+.main-titles>a.mynintendo{
+    height:447px;
+    background-image: url(../img/index/mynintendo/my-nintendo-mii.jpg);
+    background-position: 50% 100%;
+}
+.main-titles>a.mynintendo>div.link-copy{
+    top:350px;
+}
+div.mynintendo>a:first-child{
+    background-size: 131px 111px;
+    background-position: 50% 70%;
+    background-image: url(../img/index/mynintendo/what-is-mynintendo.svg);
+}
+div.mynintendo>a:nth-child(2){
+    background-position: 50% 70%;
+    background-size: 225px 142px;
+    background-image: url(../img/index/mynintendo/redeem-points.svg);
+}
+div.mynintendo>a:nth-child(3){
+    background-size: 225px 135px;
+    background-position: 50% 70%;
+    background-image: url(../img/index/mynintendo/earn-points.svg);
+}
+div.mynintendo>a:last-child{
+    background-image: url(../img/index/mynintendo/about-points.jpg);
+}
+#switch{
+    background: #fff;
+}
+#threeds{
+    background: #ce181e;
+}
+#game{
+    background: #ff7d00;
+}
+#amiibo{
+    background-image: url(../img/index/amiibo/bg-amiibo.png);
+}
+#play{
+    background: #FF3F3F;
+}
+#support{
+    background: #00BFF3;
+}
+#mynintendo{
+    background-color: #fff;
+    background-image: radial-gradient(#efefef 25%, transparent 26%), radial-gradient(#efefef 25%, transparent 26%);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+}
+@keyframes jump{
+    0%{
+        transform: translateY(-15px);
+    }
+    50%{
+        transform: translateY(15px);        
+    }
+    100%{
+        transform: translateY(-15px);
+    }
+}
+@keyframes sway{
+    0%{
+        transform: translateX(-15px);
+    }
+    50%{
+        transform: translateX(15px);        
+    }
+    100%{
+        transform: translateX(-15px);
+    }
+}
+@keyframes grow{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes rock{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-25deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <header id="header"></header>
+    <div id="user">
+        <div class="top-line"></div>
+        <b class="chose">登录</b>
+        <b>注册</b>
+        <div class="login">
+            <form id="log">
+                <input type="text" placeholder="昵称" name="uname"><br>
+                <span class="info info-uname"></span>
+                <input type="password" placeholder="密码" name="upwd"><br>
+                <span class="info info-upwd"></span>
+                <button class="chose">登录</button>
+                <button>注册</button>
+            </form>
+        </div>
+        <div class="register hide">
+            <form id="reg">
+                <input type="text" placeholder="昵称(3-9位,字母开头)" name="uname">
+                <input type="password" placeholder="密码(6-16位字符,区分大小写)" name="upwd">
+                <input type="password" placeholder="确认密码" name="cpwd">
+                <input type="email" placeholder="邮箱" name="email">
+                <input type="checkbox" class="agree"><span>我已同意</span><br>
+                <button class="chose disable" disabled>注&nbsp;&nbsp;&nbsp;册</button>
+            </form>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

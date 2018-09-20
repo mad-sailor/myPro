@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/soft.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+</head>
+<body>
+    <header id="header"></header>
+    <div id="res">
+        <div class="top">
+            <span>Sort by</span>
+            <select name="" id="order">
+                <option selected value="gid">Featured</option>
+                <option value="timer-asc">Release Date(asc)</option>
+                <option value="timer-desc">Release Date(desc)</option>
+                <option value="title-a">Title (A-Z)</option>
+                <option value="title-z">Title (Z-A)</option>
+                <option value="price-l">Price (low to high)</option>
+                <option value="price-h">Price (high to low)</option>
+            </select>
+            <a href="#" data-type="box" class="chose"></a>
+            <a href="#" data-type="row"></a>
+        </div>
+        <div class="middle clear">
+            <div class="left">
+                <h1>Filters <button data-triggle="refresh">Clear all</button></h1>
+                <ul>
+                    <li class="theme"><h1>Platform</h1>
+                        <ul>
+                            <li><input type="checkbox"><span class="iconfont"></span><label >Nintendo Switch</label></li>
+                            <li><input type="checkbox"><span class="iconfont"></span><label >Nintendo 3DS</label></li>
+                            <li><input type="checkbox"><span class="iconfont"></span><label >Wii U</label></li>
+                        </ul>
+                    </li>
+                    <li class="theme"><h1>Character</h1>
+                        <ul>
+                            <li><input type="checkbox"><span class="iconfont"></span><label >Mario</label></li>
+                            <li><input type="checkbox"><span class="iconfont"></span><label >Zelda</label></li>
+                            <li><input type="checkbox"><span class="iconfont"></span><label >Donkey Kong</label></li>
+                            <li><input type="checkbox"><span class="iconfont"></span><label >Pokemon</label></li>
+                            <li><input type="checkbox"><span class="iconfont"></span><label >Kirby</li>
+                        </ul>
+                    </li>
+                    <li class="theme"><h1>Category</h1>
+                        <ul>
+                            <li><input type="checkbox"><span class="iconfont"></span><label >Action</label></li>
+                            <li><input type="checkbox"><span class="iconfont"></span><label >Adventure</label></li>
+                            <li><input type="checkbox"><span class="iconfont"></span><label >Role-playing</label></li>
+                            <li><input type="checkbox"><span class="iconfont"></span><label >Puzzle</label></li>
+                            <li><input type="checkbox"><span class="iconfont"></span><label >Party</label></li>
+                            <li><input type="checkbox"><span class="iconfont"></span><label >Music</label></li>
+                            <li><input type="checkbox"><span class="iconfont"></span><label >Sports</label></li>
+                            <li><input type="checkbox"><span class="iconfont"></span><label >Simulation</label></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="pro">
+                <!-- 一排四列布局 -->
+                <!-- <div class="game-box">
+                    <div>
+                        <img src="img/software/game/daemon.png">
+                    </div>
+                    <p>DAEMON X MACHINA</p>
+                    <p>Release 2019</p>
+                    <p>Nintendo Switch</p>
+                </div>    -->
+                <!-- 一排一列布局 -->
+                <!-- <div class="game-row">
+                    <div class="pic">
+                        <img src="img/software/game/xenoblade.png">
+                    </div>
+                    <div class="desc">
+                        <p>DAEMON X MACHINA</p>
+                        <p>Release 2019</p>
+                        <p>No. of Players 1 player</p>
+                        <p>Genre Action</p>
+                        <p>Nintendo Switch</p>
+                    </div>
+                    <div class="price">
+                        <p>$24.99</p>
+                        <p>Bug digital</p>
+                        <p>Buy physical &gt;</p>
+                    </div>
+                </div> -->
+            </div>
+            <button data-load="1">Load More Games</button>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/soft.js"></script>
+</body>
+</html>

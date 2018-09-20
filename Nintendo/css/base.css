@@ -1,0 +1,40 @@
+/*css样式重写*/
+body{
+    width:1440px;
+    margin:0 auto;
+    padding: 0;
+    color:#8c8c8c;
+    font:14px ncommonJp, YuGothic, sans-serif;
+}
+ul,p,h1,h2,h3,h4,h5,h6,ol,dl,pre,input{
+	list-style:none;
+	margin:0;
+    padding:0;
+}
+div,p{
+    box-sizing: border-box;
+}
+label{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color:#8c8c8c;
+}
+a:hover{
+    color:#00d2be;
+}
+img{
+    vertical-align:middle;
+}
+.lf{
+    float:left;
+}
+.rl{
+    float:right;
+}
+.clear:after{
+    content:"";
+    display:block;
+    clear:both;
+}

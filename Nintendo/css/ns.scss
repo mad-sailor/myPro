@@ -1,0 +1,552 @@
+#scroll-right{
+    position: fixed;
+    top:50%;
+    margin-top: -75px;
+    right:0;
+    z-index: 500;
+    width:31px;
+    height:167px;
+    padding: 6px 0;
+    background: rgba(27,27,27,.2);
+    cursor: pointer;
+    .scroll-item{
+        width: 31px;
+        height:31px;
+        position: relative;
+        &::after{
+            content: '';
+            background: #fff;
+            position: absolute;
+            top:10px;
+            left:10px;
+            width: 11px;
+            height:11px;
+        }
+        &:hover{
+            span{
+                display: block;
+            }
+        }
+        span{
+            position: absolute;
+            top:6.5px;
+            right: 100%;
+            white-space: nowrap;
+            font-size: 11px;
+            color:#fff;
+            background: #e60012;
+            padding: 0 7px;
+            display: none;
+        }
+    }
+    .chose::before{
+        content: '';
+        background: #000;
+        width:5px;
+        height:5px;
+        position: absolute;
+        top:13px;
+        left:13px;
+        z-index:5;
+    }
+}
+#hero{
+    width:1440px;
+    height:544px;
+    overflow: hidden;
+    position: relative;
+    .logo{
+        width:155px;
+        height:74px;
+        position: absolute;
+        top:0;
+        left:0;
+        background: #e60012 url(../img/ns/logo-nintendo.svg) no-repeat 50%;
+        z-index:10;
+        cursor: pointer;
+    }
+    .head-txt{
+        position: absolute;
+        top:255px;
+        left:50%;
+        margin-left:-386px;
+        z-index:10;
+        font-size: 64px;
+        text-shadow: 0 0 5px #000;
+        color:white;
+        font-weight: bold;
+        letter-spacing: 20px;
+        span{
+            margin-left: 100px;
+        }
+    }
+    .hero-img{
+        height:544px;
+        overflow: hidden;
+        img{
+            position: absolute;
+            width:1440px;
+            z-index: 1;
+        }
+        .active{
+            z-index:3;
+            animation: grow 5s linear;
+        }
+        .next{
+            z-index:2;
+        }
+    }
+}
+@keyframes grow{
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    80%{
+        transform: scale(1.04);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.05);
+        opacity: 0;
+    }
+}
+#nav-menu{
+    width:1440px;
+    height:56px;
+    border-bottom: 1px solid #3c3c3c;
+    background: #1b1b1b;
+    padding: 0 21px;
+    position: relative;
+    ul{
+        li{
+            float:left;
+            cursor: pointer;
+            margin-right: 14px;
+            color:#fff;
+            &:first-child>a{
+                letter-spacing: 3.5px;
+                &::after{
+                    transform: translateY(-7px);
+                }
+                
+            }
+            &:hover a::after{
+                transition: all 300ms linear;
+                transform: translateY(-7px);
+            }
+            a{
+                color:#fff;
+                padding: 0 10px;
+                height:56px;
+                line-height: 56px;
+                font-size: 14px;
+                font-stretch: 100%;
+                position: relative;
+                &::after{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 6px;
+                    background: #e60012;
+                    transition: 150ms linear;
+                }
+            }
+        }
+    }
+    .soft{
+        position: absolute;
+        top:20px;
+        right:20px;
+        a{
+            background: url(../img/ns/arrow.svg) no-repeat center left;
+            background-size: 12px;
+            padding-left: 15px;
+            color:#fff;
+        }
+    }
+}
+#gallery{
+    width: 1440px;
+    height:637px;
+    padding:10px 0;
+    overflow: hidden;
+    background: #1b1b1b;
+    position: relative;
+    z-index: 10;
+    ul{
+        display: flex;
+        width:3680px;
+        position: relative;
+        animation: wrap 64s linear infinite;
+        li{
+            width: 450px;
+            margin-left: 10px;
+        }
+    }
+    div.gallery-content{
+        width:100%;
+        height:162px;
+        padding: 40px;
+        display: flex;
+        color:#fff;
+        .content-left{
+            height:82px;
+            font-size: 34px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            margin-left: 300px;
+            margin-top: -10px;
+        }
+        .content-right{
+            margin-left: 50px;
+            height:64px;
+            line-height: 32px;
+            font-size:15px;
+            font-weight: lighter;
+            margin-top: 13px;
+        }   
+    }
+}
+#play-mode{
+    .top{
+        width: 100%;
+        height:424px;
+        overflow: hidden;
+        position: relative;
+        img{
+            position: absolute;
+            //top:-195px;
+            left:0;
+            transition: all .5s linear;
+            &:nth-child(2){
+                top:273px;
+                left:0px;
+            }
+        }
+        p{
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            color:#000;
+            font-family: "YuGothic";
+            font-weight: bolder;
+            &:nth-child(4){
+                top:90px;
+                font-size: 32px;
+                letter-spacing: 1px;
+                
+            }
+            &:last-child{
+                top:136px;
+                font-size: 58px;
+                letter-spacing: 4px;
+            }
+        }
+    }
+    .bottom{
+        width: 100%;
+        height:822px;
+        padding: 14px 40px 84px;
+        display: flex;
+        .mode-item{
+            width:443px;
+            margin-right: 14px;
+            div.mode-img{
+                width: 0%;
+                height:443px;
+                overflow: hidden;
+                transition: all .5s linear;
+                img{
+                    width: 443px;
+                    height:443px;
+                }
+            }
+            .mode-headline{
+                width: 372px;
+                height:80px;
+                padding: 0 7px 7px;
+                background: #1b1b1b;
+                margin: 0 auto;
+                margin-top: -40px;
+                position: relative;
+                z-index: 10;
+                text-align: center;
+                color:#fff;
+                p:first-child{
+                    font-size: 25px;
+                    padding: 6px 0;
+                }
+                p:last-child{
+                    width: 357px;
+                    height:24px;
+                    line-height: 24px;
+                    background: #fff;
+                    color:#000;
+                    font-size: 12px;
+                    font-weight: bolder;
+                    letter-spacing: 4px;
+                }
+            }
+            p:nth-child(3){
+                width: 100%;
+                height:152px;
+                text-align: center;
+                box-sizing: border-box;
+                padding: 42px 111px;
+                font-size: 25px;
+                font-weight: bolder;
+                color:#000;
+                span{
+                    display: block;
+                }
+            }
+            p:last-child{
+                box-sizing: border-box;
+                width: 100%;
+                padding: 0 36px;
+                font-size: 16px;
+                color:#3c3c3c;
+                line-height: 34px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+#multiplay{
+    width:1440px;
+    height:602px;
+    overflow: hidden;
+    transition: all .5s linear;
+    opacity: 0;
+    .left{
+        width:928px;
+        float: left;
+        img{
+            width:100%;
+        }
+    }
+    .right{
+        float: left;
+        width:512px;
+        height:602px;
+        padding: 0 48px;
+        background: #1b1b1b;
+        &>div{
+            height:169px;
+            padding-left: 24px;
+            margin-top: 48px;
+            border-left:8px solid #fff;
+        }
+        .top{
+            div:last-child{
+                color:#fff;
+                font-weight: lighter;
+            }
+        }
+        .title{
+            padding-bottom: 26px;
+            font-size: 32px;
+            color:#fff;
+            letter-spacing: 3px;
+        }
+        .bottom{
+            margin-top:36px;
+            div:last-child{
+                color:#fff;
+                font-weight: lighter;
+            }
+        }
+    }
+}
+#joy-con{
+    width:1440px;
+    height:670px;
+    margin-top: 20px;
+    position: relative;
+    img{
+        position: absolute;
+        top:80px;
+    }
+    .left-joy{
+        left:50%;
+        margin-left:-516px;
+    }
+    .right-joy{
+        right:50%;
+        margin-right:-516px;
+    }
+    .joy-tm{
+        top:228px;
+        left:50%;
+        margin-left: -229.5px;
+    }
+    .joy-control{
+        top:340px;
+        left:50%;
+        margin-left: -229px;
+    }
+    p{
+        position: absolute;
+        top:396px;
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+        color:#3c3c3c;
+    }
+    .mask{
+        width:100%;
+        height:670px;
+        position: absolute;
+        top:0;
+        left:0;
+        background: #fff;
+        z-index:1;
+        transition: all 1s linear;
+    }
+}
+#bot-intr{
+    width:1440px;
+    height:410px;
+    margin-top: 50px;
+    background: url(../img/ns/software/soft_bg.jpg);
+    position: relative;
+    div.mask{
+        width:100%;
+        height:100%;
+        position: absolute;
+        background: rgba(0,0,0,.8);
+    }
+    div.title{
+        width:1120px;
+        height:117px;
+        line-height: 51px;
+        padding: 33px 0;
+        position: absolute;
+        left:50%;
+        margin-left: -560px;
+        z-index: 1;
+        font-size: 64px;
+        color:#fff;
+        span{
+            font-size: 16px;
+            position: absolute;
+            right:0;
+            top:34px;
+        }
+    }
+    div.game-pic{
+        position: absolute;
+        top:117px;
+        width: 100%;
+        height:201px;
+        overflow: hidden;
+        ul{
+            width:3040px; 
+            position: relative;
+            li{
+                float: left;
+                margin-right: 20px
+            }
+        }  
+    }
+    a.soft-link{
+        position: absolute;
+        bottom:22px;
+        left:50%;
+        margin-left: -95px;
+        z-index: 1;
+        img{
+            width:190px;
+            height:42px;
+        }
+    }
+}
+/*瀑布流式图片布局*/
+#container{
+    width: 1440px;
+    height:1088px;
+    padding: 0 40px;
+    position: relative;
+    z-index: 2;
+    div{
+        float: left;
+        display:none;
+    }
+    div:first-child{
+        img{
+            width: 541px;
+        }
+        margin-right: 6px;
+        margin-bottom: 6px;
+    }
+    div:nth-child(2){
+        img{
+            height:268px;
+        }
+        margin-bottom: 6px;
+    }
+    div:nth-child(3){
+        width:539px;
+        height:542px;
+        position: relative;
+        p{
+            position: absolute;
+            top:30%;
+            padding: 0 74px;
+            font-size: 16px;
+            line-height: 2.2;
+            color:#3c3c3c;
+            &:nth-child(2){
+                top:50%;
+            }
+            &:last-child{
+                top:63%;
+            }
+        }
+    }
+    div:nth-child(4),div:nth-child(5){
+        img{
+            width:268px;
+        }
+        margin-bottom: 6px;
+        margin-left: 6px;
+    }
+    div:nth-child(6),div:nth-child(7){
+        img{
+            width:268px;
+        }
+        margin-top: -275px;
+        margin-right: 6px;
+    }
+    div:nth-child(8){
+        img{
+            width:543px;
+            height:266px;
+        }
+    }
+    div:last-child{
+        img{
+            height:266px;
+        }
+        margin-left: 6px;
+    }
+}
+@keyframes wrap{
+    0%{
+        left:0px;
+    }
+    25%{
+        left:-460px;
+    }
+    50%{
+        left:-920px;
+    }
+    75%{
+        left:-1380px;
+    }
+    100%{
+        left:-1840px;
+    }
+}

@@ -1,0 +1,56 @@
+.footer-top {
+  width: 1440px;
+  height: 227px;
+  padding: 20px 190px;
+  background: linear-gradient(to top, #e7e7e7 0%, #f9f9f9 75%); }
+  .footer-top ul.outer {
+    width: 1060px;
+    display: flex; }
+    .footer-top ul.outer > li {
+      width: 150px;
+      height: 139px;
+      padding: 5px 0;
+      margin-right: 28px;
+      color: #a0a0a0; }
+      .footer-top ul.outer > li a {
+        font-family: "LatoBold";
+        font-weight: bold;
+        font-size: 16px; }
+        .footer-top ul.outer > li a:hover {
+          color: #484848; }
+      .footer-top ul.outer > li ul > li {
+        height: 14px;
+        font-size: 12px;
+        font-family: "LatoRegular";
+        font-weight: light;
+        padding: 5px 0;
+        cursor: pointer; }
+        .footer-top ul.outer > li ul > li:hover {
+          color: #484848; }
+      .footer-top ul.outer > li:last-child > a {
+        display: inline-block;
+        width: 224px; }
+        .footer-top ul.outer > li:last-child > a + ul > li {
+          width: 224px; }
+
+.footer-bottom {
+  width: 1440px;
+  height: 165px;
+  padding: 20px;
+  background: linear-gradient(to bottom, #8c8a8a 0%, #989898 50%);
+  color: #e2e2e2;
+  text-align: center;
+  font-size: 14px;
+  font-family: "LatoRegular"; }
+  .footer-bottom p {
+    margin: 0 auto; }
+  .footer-bottom img {
+    margin-top: 15px; }
+  .footer-bottom p > span {
+    margin-left: 20px; }
+  .footer-bottom p:last-child {
+    font-size: 12px;
+    font-weight: lighter;
+    margin-top: 25px; }
+
+/*# sourceMappingURL=footer.css.map */

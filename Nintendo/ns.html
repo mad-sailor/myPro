@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nintendo Switch</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/ns.css">
+</head>
+<body>
+    <!-- 楼层指示 -->
+    <div id="scroll-right">
+        <div class="scroll-item chose" data-njs="nav-item">
+            <span>Top</span>
+        </div>
+        <div class="scroll-item" data-njs="nav-item">
+            <span>Switch and Play</span>
+        </div>
+        <div class="scroll-item" data-njs="nav-item">
+            <span>Play Mode</span>
+        </div>
+        <div class="scroll-item" data-njs="nav-item">
+            <span>Multi-play</span>
+        </div>
+        <div class="scroll-item" data-njs="nav-item">
+            <span>Joy-Con™</span>
+        </div>
+    </div>
+    <!-- 顶层轮播 1F-->
+    <div id="hero" data-toggle="floor">
+        <div class="logo"></div>
+        <div class="head-txt">
+            随时随地<span>大家同乐</span>
+        </div>
+        <div class="hero-img">
+            <img src="img/ns/hero/1.jpg" class="active">
+            <img src="img/ns/hero/2.jpg" class="next">
+            <img src="img/ns/hero/3.jpg">
+            <img src="img/ns/hero/4.jpg">
+            <img src="img/ns/hero/5.jpg">
+            <img src="img/ns/hero/6.jpg">
+        </div>
+    </div>
+    <!-- 导航栏 -->
+    <div id="nav-menu">
+        <ul class="clear">
+            <li><a href="#">特征</a></li>
+            <li><a href="#">功能/规格</a></li>
+            <li><a href="#" data-link="soft">游戏软体一揽</a></li>
+            <li><a href="#">周边设备</a></li>
+            <li><a href="#">Nintendo Switch™ Parental Controls</a></li>
+        </ul>
+        <div class="soft">
+            <a href="#" data-link="soft">游戏软件</a>
+        </div>
+    </div>
+    <!-- 画廊 2F-->
+    <div id="gallery" data-toggle="floor">
+        <ul>
+            <li><img src="img/ns/wrapper/img-01.jpg"></li>
+            <li><img src="img/ns/wrapper/img-02.jpg"></li>
+            <li><img src="img/ns/wrapper/img-03.jpg"></li>
+            <li><img src="img/ns/wrapper/img-04.jpg"></li>
+            <li><img src="img/ns/wrapper/img-01.jpg"></li>
+            <li><img src="img/ns/wrapper/img-02.jpg"></li>
+            <li><img src="img/ns/wrapper/img-03.jpg"></li>
+            <li><img src="img/ns/wrapper/img-04.jpg"></li>
+        </ul>
+        <div class="gallery-content">
+            <div class="content-left">
+                <p>改变形态</p>
+                <p>可带到任何地方</p>
+            </div>
+            <div class="content-right">
+                <p>Nintendo Switch™是一部可配合不同场合而改变形态的游戏机。</p>
+                <p>随时随地自由享乐。</p>
+            </div>
+        </div>
+    </div>
+    <!-- play mode 3F -->
+    <div id="play-mode" data-toggle="floor">
+        <div class="top">
+            <img src="img/ns/playmode/bg-headline-left.png" data-trigger="move">
+            <img src="img/ns/playmode/bg-headline-center.png">
+            <img src="img/ns/playmode/bg-headline-right.png" data-trigger="move">
+            <p>Nintendo Switch</p>
+            <p>3种游玩模式</p>
+        </div>
+        <div class="bottom"></div>
+    </div>
+    <!-- multiplay 4F-->
+    <div id="multiplay" data-toggle="floor">
+        <div class="left">
+            <img src="img/ns/ph.jpg">
+        </div>
+        <div class="right">
+            <div class="top">
+                <div class="title">
+                    <p>最多连接8台的</p>
+                    <p>多人游戏</p>
+                </div>
+                <div>『Splatoon2』或『马力欧8 豪华版』等，只要有主机，就可利用附近主机通讯连接最多8台进行对战或协力等多人游戏。</div>
+            </div>
+            <div class="bottom">
+                <div class="title">透过网络连接</div>
+                <div>加入「Nintendo Switch」专用网上服务(付費)※，也可和远方的朋友或全世界的玩家进行对战及协力游戏。与智慧型手机专用应用程式进行连动，可和朋友约见，也可一边进行话音聊天，一边玩游戏。</div>
+            </div>
+        </div>
+    </div>
+    <!-- joy-con 5F-->
+    <div id="joy-con" data-toggle="floor">
+        <img src="img/ns/JoyCon/title_joycon01.png" class="left-joy">
+        <img src="img/ns/JoyCon/title_joycon02.png" class="right-joy">
+        <img src="img/ns/JoyCon/title_text01.png" class="joy-tm">
+        <img src="img/ns/JoyCon/title_text02_pc.png" class="joy-control">
+        <p>「Nintendo Switch」附有控制器「Joy-Con」左右各一。</p>
+        <div class="mask"></div>
+    </div>
+    <!-- 瀑布流式图片布局 -->
+    <div id="container" class="clear">
+        <div data-num="1">
+            <img src="img/ns/JoyCon/pic_01.jpg">
+        </div>
+        <div data-num="2"> 
+            <img src="img/ns/JoyCon/pic_02.jpg">
+        </div>
+        <div data-num="3">
+            <p>除了直握、横握，也有双手各握一个操作或双手握着的玩法。</p>
+            <p>装上附属的「Joy-Con腕带」，就可以将腕带戴上手腕上，体验动感操作。</p>
+            <p>此外，横握控制器时也可轻易操作SL/SR键。</p>
+        </div>
+        <div data-num="4">
+            <img src="img/ns/JoyCon/pic_03.jpg">
+        </div>
+        <div data-num="5">
+            <img src="img/ns/JoyCon/pic_04.jpg">
+        </div>
+        <div data-num="6">
+            <img src="img/ns/JoyCon/pic_05.jpg">
+        </div>
+        <div data-num="7">
+            <img src="img/ns/JoyCon/pic_06.jpg">
+        </div>
+        <div data-num="8">
+            <img src="img/ns/JoyCon/pic_07.jpg">
+        </div>
+        <div data-num="9">
+            <img src="img/ns/JoyCon/pic_08.jpg">
+        </div>
+    </div>
+    <!-- 底层 -->
+    <div id="bot-intr">
+        <div class="mask"></div>
+        <div class="title">Software<span>Nintendo Switch游戏软件</span></div>
+        <a href="#" data-link="soft" class="soft-link">
+            <img src="img/ns/software/soft_bt.png">
+        </a>
+        <div class="game-pic">
+            <ul>
+                <li>
+                    <img src="img/ns/software/soft_thumb01.jpg">
+                </li>
+                <li>
+                    <img src="img/ns/software/soft_thumb02.jpg">
+                </li>
+                <li>
+                    <img src="img/ns/software/soft_thumb03.jpg">
+                </li>
+                <li>
+                    <img src="img/ns/software/soft_thumb04.jpg">
+                </li>
+                <li>
+                    <img src="img/ns/software/soft_thumb05.jpg">
+                </li>
+                <li>
+                    <img src="img/ns/software/soft_thumb06.jpg">
+                </li>
+                <li>
+                    <img src="img/ns/software/soft_thumb07.jpg">
+                </li>
+                <li>
+                    <img src="img/ns/software/soft_thumb08.jpg">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/ns.js"></script>
+</body>
+</html>
