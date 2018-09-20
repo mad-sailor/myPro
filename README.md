@@ -1,2 +1,2 @@
 # myPro
-exercise vue and vue-router
+exercise jq and layout
